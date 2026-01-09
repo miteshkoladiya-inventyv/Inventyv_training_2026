@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Register Tabs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <img src="tesla.png" alt="tesla logo">
+    <p>
+      Hello Tesla
+    </p>
+  </div>
+
+  <div class="right">
+
+    <div class="tabs">
+      <a href="#login">Login</a>
+      <a href="#register">Register</a>
+    </div>
+
+    <div id="login" class="form-box">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <a href="#forgot-password" class="forgot-password">Forgot Password?</a>
+      <a href="#login"><button>Login</button></a>
+      <p class="switch-text">Don't have an account? <a href="#register">Register here</a></p>
+    </div>
+
+    <div id="register" class="form-box">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Register</button>
+      <p class="switch-text">Already have an account? <a href="#login">Login here</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
