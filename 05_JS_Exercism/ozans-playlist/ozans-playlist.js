@@ -1,0 +1,58 @@
+// @ts-check
+
+/**
+ * Removes duplicate tracks from a playlist.
+ *
+ * @param {string[]} playlist
+ * @returns {string[]} new playlist with unique entries
+ */
+export function removeDuplicates(playlist) {
+  return [...new Set(playlist)];
+}
+
+/**
+ * Checks whether a playlist includes a track.
+ *
+ * @param {string[]} playlist
+ * @param {string} track
+ * @returns {boolean}
+ */
+export function hasTrack(playlist, track) {
+  return playlist.includes(track);
+}
+
+/**
+ * Adds a track to a playlist.
+ *
+ * @param {string[]} playlist
+ * @param {string} track
+ * @returns {string[]} new playlist
+ */
+export function addTrack(playlist, track) {
+  if (playlist.includes(track)) {
+    return playlist;
+  }
+  return [...playlist, track];
+}
+
+/**
+ * Deletes a track from a playlist.
+ *
+ * @param {string[]} playlist
+ * @param {string} track
+ * @returns {string[]} new playlist
+ */
+export function deleteTrack(playlist, track) {
+  return playlist.filter((item) => item !== track);
+}
+
+/**
+ * Lists the unique artists in a playlist.
+ *
+ * @param {string[]} playlist
+ * @returns {string[]}
+ */
+export function listArtists(playlist) {
+  const artists = playlist.map((track) => track.split(' - ')[1]);
+  return [...new Set(artists)];
+}
