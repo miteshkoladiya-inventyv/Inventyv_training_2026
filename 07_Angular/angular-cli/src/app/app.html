@@ -1,0 +1,14 @@
+<main class="main">
+  <div class="cli-container">
+    <h2>Angular CLI</h2>
+    <pre class="output">{{ output }}<span class="cursor"></span></pre>
+    <input 
+      #cmd 
+      (keydown)="onKeyDown($event, cmd)"
+      class="cli-input"
+      autofocus
+    >
+  </div>
+</main>
+
+<router-outlet />
