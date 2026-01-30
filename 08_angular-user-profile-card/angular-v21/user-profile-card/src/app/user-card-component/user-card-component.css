@@ -1,0 +1,14 @@
+.user-card {
+    border: 2px solid;
+    width: 20%;
+
+}
+
+.user-card.active {
+    border-color: green;
+}
+
+
+.user-card.inactive {
+    border-color: red;
+}

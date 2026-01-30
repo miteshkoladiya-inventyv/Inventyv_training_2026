@@ -1,0 +1,12 @@
+.user-card {
+  width: 300px;
+  border: 2px solid ;
+}
+
+.user-card.active {
+  border-color:green;
+}
+
+.user-card.inactive {
+  border-color: red;
+}

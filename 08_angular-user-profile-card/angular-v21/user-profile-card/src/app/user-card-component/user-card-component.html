@@ -1,0 +1,49 @@
+<!-- <div>
+    <div>
+        <h2>User Information</h2>
+        <p>Name: {{name()}}</p>
+        <p>Age: {{age()}}</p>
+    </div>
+    <div>
+        <img [src]="avatarUrl" alt="User Avatar" />
+    </div>
+    <div>
+        <label for="nameInput">Edit Name:</label>
+        <input id="nameInput" [(ngModel)]="name" />
+    </div>
+
+    <mat-card class="user-card" [class.active]="isActive()" [class.inactive]="!isActive()">
+        <button mat-button (click)="toggleStatus()">
+            {{ isActive() ? 'Deactivate' : 'Activate' }} User
+        </button>
+    </mat-card>
+    <p>current status: {{ isActive() ? 'Active' : 'Inactive' }}</p>
+</div> -->
+<mat-card class="user-card"
+  [class.active]="isActive"
+  [class.inactive]="!isActive"
+>
+  <mat-card-title>
+   Name: {{ userName }}
+     (Age: {{ user.age }})
+  </mat-card-title>
+  <img [src]="user.avatarUrl" alt="User Avatar" width="120" />
+  <br>
+
+  <mat-card-content>
+    <mat-form-field appearance="outline">
+      <mat-label>User Name</mat-label>
+      <input class="input" #nameInput matInput [(ngModel)]="userName" />
+    </mat-form-field>
+
+    <button
+      #matBtn
+      mat-raised-button
+      (click)="toggleStatus()"
+      [disabled]="!userName.trim()"
+    >
+      {{ isActive ? 'Deactivate' : 'Activate' }}
+    </button>
+    <p>Current Status: {{ isActive ? 'Active' : 'Inactive' }}</p>
+  </mat-card-content>
+</mat-card>

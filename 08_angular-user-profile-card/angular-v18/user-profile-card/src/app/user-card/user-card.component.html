@@ -1,0 +1,22 @@
+<mat-card class="user-card" [class.active]="isActive" [class.inactive]="!isActive">
+
+
+    <mat-card-title>
+        {{ userName }} (Age: {{ user.age }})
+    </mat-card-title>
+
+    <img [src]="user.avatarUrl" alt="User Avatar" width="120" />
+
+    <mat-card-content>
+            <br>
+            <input #nameInput matInput [(ngModel)]="userName" />
+    
+<br><br>
+        <button #matBtn   (click)="toggleStatus()" [disabled]="!userName">
+            {{ isActive ? 'Deactivate' : 'Activate' }}
+        </button>
+        <p>current status: {{ isActive ? 'Active' : 'Inactive' }}</p>
+
+    </mat-card-content>
+
+</mat-card>
