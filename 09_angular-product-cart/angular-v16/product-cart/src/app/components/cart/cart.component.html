@@ -1,0 +1,21 @@
+<h2>Cart</h2>
+
+<div *ngIf="cart.length === 0">Cart is empty</div>
+
+<div class="cart-item" *ngFor="let item of cart">
+    <span>
+        {{ item.name }} (₹{{ item.price }}) x {{ item.quantity }}
+    </span>
+
+    <button (click)="dec(item.id)">-</button>
+    <button (click)="inc(item.id)">+</button>
+    <button (click)="remove(item.id)">Remove</button>
+</div>
+
+<hr />
+
+<h3>Total: ₹{{ total }}</h3>
+
+<button (click)="clear()" [disabled]="cart.length === 0">
+    Clear Cart
+</button>

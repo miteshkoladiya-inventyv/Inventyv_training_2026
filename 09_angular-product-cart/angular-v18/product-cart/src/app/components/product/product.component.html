@@ -1,0 +1,11 @@
+
+<span class="cart-badge">
+  Total Items in Cart: {{ cartService.totalItems() }}
+</span>
+<h2>Products List</h2>
+<!-- @for (p of products; track $index) { -->
+<div class="product" *ngFor="let p of products">
+  <span>{{ p.name }} - {{ p.price }}</span>
+  <button (click)="add(p)">Add to Cart</button>
+</div>
+

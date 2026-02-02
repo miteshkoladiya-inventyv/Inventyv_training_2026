@@ -1,0 +1,26 @@
+<p>products.component works!</p>
+<span class="cart-badge">
+  Total Items in Cart: {{ cartService.totalItems() }}
+</span>
+<h2>Products List</h2>
+@for (p of products; track $index) {
+<div class="product">
+  <span>{{ p.name }} - {{ p.price }}</span>
+  <button (click)="add(p)">Add to Cart</button>
+</div>
+}
+
+
+<!-- <div class="products-container">
+  <span class="cart-badge">🛒 Total Items in Cart: {{ cartService.totalItems() }}</span>
+  <h2>✨ Products</h2>
+  <div class="products-list">
+    @for (p of products; track $index) {
+    <div class="product">
+      <span class="product-name">{{ p.name }}</span>
+      <span class="product-price">₹{{ p.price.toLocaleString() }}</span>
+      <button (click)="add(p)">Add to Cart</button>
+    </div>
+    }
+  </div>
+</div> -->
