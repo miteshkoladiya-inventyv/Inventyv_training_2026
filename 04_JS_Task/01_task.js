@@ -5,6 +5,7 @@ function firstfn(arr, callback) {
 
 function secondfn(firstElement, restOfArray) {  
     return firstElement + restOfArray.reduce((acc, val) => acc + val, 0);
+    //hello
 }
 
 
